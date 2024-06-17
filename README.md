@@ -1,33 +1,109 @@
-# yogiblog
- Test blog web app
- 1. Initial Setup:
+Blog Project with Laravel: Features and Setup
+This document outlines the features, setup instructions, and usage details for a blog application built with Laravel.
 
-init: Create post-list Blade template (Basic structure for listing posts) - This message describes the creation of the core Blade template for displaying your blog post list.
-2. Post Listing Logic (Optional):
+Requirements
+PHP 8.1 or higher
+Composer
+Node.js and npm
+Features
+User Authentication:
 
-If you implemented any logic within the Blade template to handle things like displaying post titles, excerpts, or author information, you can create a commit message like:
-feat: Implement post listing logic in post-list Blade template (Display titles, excerpts, authors)
-3. Include Livewire Script:
+User registration and login functionality using Laravel's built-in scaffolding.
+User roles and permissions management with Spatie Laravel-Permission package.
+Blog Posts:
 
-feat: Integrate Livewire for search functionality (Include Livewire scripts) - This message highlights the inclusion of Livewire scripts to enable the search feature.
-4. Add Livewire Search Component:
+CRUD operations (Create, Read, Update, Delete) for blog posts.
+Validation for title (required, unique) and body (required).
+Comments:
 
-feat: Add Livewire SearchPosts component (Search bar and logic) - This message focuses on adding the specific Livewire component responsible for handling the search bar and its functionality.
-5. Search Component Logic:
+CRUD operations for comments on posts.
+Validation for comment body (required).
+Post Listing:
 
-Refer to the message from the previous section on search functionality (fix: Handle search logic in Livewire component (Filter posts by title and body))
-6. Blade Template Integration:
+Display all blog posts on the homepage with title, author, and snippet.
+Post Details:
 
-Refer to the message from the previous section on search integration (feat: Integrate Livewire search component into post-list Blade template)
-7. Search Results Handling:
+Display full content of a post along with its comments.
+Admin Panel:
 
-Refer to the message from the previous section on search results (refactor: Update post-list Blade template to display search results)
-8. (Optional) Admin Middleware:
+Manage posts and comments through a dedicated admin interface.
+API Endpoints:
 
-Refer to the message from the previous section on admin middleware creation (feat: Implement middleware to protect admin routes (Create MustBeAdmin middleware))
-9. Final Touches:
+Create, update, and view posts using API endpoints.
+Additional Features:
 
-Refer to the message from the previous section on final adjustments (fix: Minor adjustments and bug fixes for search functionality)
-10. Final Push:
+(Optional) Search functionality for posts by title or body content.
+(Optional) Enhanced admin panel features for post and comment management.
+Installation
+Clone the Repository:
 
-feat: Completed search functionality for blog post list - This final message offers a broader summary of the entire development process, highlighting the completion of the search feature.
+Bash
+git clone https://github.com/your-repository-url.git
+cd your-repository-name
+Use code with caution.
+content_copy
+Install Dependencies:
+
+Bash
+composer install
+npm install
+Use code with caution.
+content_copy
+Set Up Environment Variables:
+
+Copy .env.example to .env and configure database credentials and other settings.
+Generate an application key:
+Bash
+php artisan key:generate
+Use code with caution.
+content_copy
+Configure Database:
+
+Update the database connection details in the .env file with your database information.
+Run Migrations and Seeders:
+
+Bash
+php artisan migrate --seed
+Use code with caution.
+content_copy
+Build Assets (using Vite):
+
+Bash
+npm run build
+Use code with caution.
+content_copy
+Start Development Server:
+
+Bash
+php artisan serve
+Use code with caution.
+content_copy
+Usage
+User Authentication:
+
+Register a new user or login with an existing account.
+Blog Management:
+
+As an authenticated user with the appropriate role (e.g., Admin, Editor), create, edit, and delete blog posts.
+Commenting:
+
+Comment on posts as an authenticated user.
+API Endpoints:
+
+Create, update, and view posts using the provided API endpoints (refer to documentation within the code for specific details and permissions required).
+Admin Panel:
+
+Access the admin panel (if applicable) for extended management features of posts and comments. This panel is typically only accessible to users with the "Admin" role.
+Unit Testing:
+
+Unit tests for key functionalities are available. Execute them using:
+
+Bash
+php artisan test
+Use code with caution.
+content_copy
+Bonus Features (Optional):
+
+Additional API endpoints for listing posts and commenting functionality.
+Search functionality for posts by title or body content.
+Enhanced admin panel features for managing posts and comments.
